@@ -17,12 +17,21 @@ class ll:
             print("ll is empty")
         else:
             self.head=self.head.next
+#  Search an element 
+    def search (self,key):
+        temp= self.head
+        while temp is not None:
+            if temp.data == key:
+                return True
+            temp = temp.next
+        return False
+
 # Print the ll
     def printlist(self):
         temp=self.head
-    while(temp):
-        print(temp.data)
-        temp=temp.next
+        while temp:
+            print(temp.data)
+            temp=temp.next
 # Creating LinkedList and adding nodes
 llist = ll()
 n=Node(1)
